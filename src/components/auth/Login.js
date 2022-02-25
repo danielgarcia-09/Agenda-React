@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/auth/AuthContext";
 
 const formStyles = {
-  width: "50%",
+  width: "60%",
   margin: "5rem auto",
 };
 
@@ -48,10 +48,14 @@ const Login = () => {
   };
 
   return (
-    <form style={formStyles} onSubmit={handleSubmit}>
+    <form 
+      className="shadow-lg p-5 mb-5 bg-body rounded"
+      style={formStyles} 
+      onSubmit={handleSubmit}
+    >
       <h1 className="text-center">Login</h1>
       <div className="form-group my-4">
-        <label htmlFor="email">Email address</label>
+        <label htmlFor="email" className="fw-bold">Email address</label>
         <input
           onChange={handleChange}
           type="email"
@@ -63,7 +67,7 @@ const Login = () => {
         />
       </div>
       <div className="form-group mb-3">
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password" className="fw-bold">Password</label>
         <input
           onChange={handleChange}
           type="password"

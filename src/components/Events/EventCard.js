@@ -11,15 +11,18 @@ const EventCard = ({ event }) => {
   const { id, name, startDate, endDate } = event;
 
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card border-primary mx-auto" style={{ width: "18rem" }}>
+     <div className="card-header text-primary">
+       <h5>Event</h5>
+     </div>
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">
-          <span>Start Date: {new Date(startDate).toLocaleDateString() + " " + new Date(startDate).toLocaleTimeString()}  </span>
+          <span className="mb-2">Start Date: {new Date(startDate).toLocaleDateString() + " " + new Date(startDate).toLocaleTimeString()}  </span>
           <span>End Date: {new Date(endDate).toLocaleDateString() + " " + new Date(endDate).toLocaleTimeString()} </span>
         </p>
-        <Link className="me-3" to={`${id}`}>Edit</Link>
-        <Link to={"#"} onClick={()=> deleteEvent(id)}>
+        <Link className="me-3 btn btn-primary" to={`${id}`}>Edit</Link>
+        <Link className="btn btn-danger"to={"#"} onClick={()=> deleteEvent(id)}>
           Delete
         </Link>
       </div>

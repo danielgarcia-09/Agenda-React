@@ -59,11 +59,14 @@ const CreateUser = () => {
 
   return (
     <Layout>
-      <form style={formStyles} onSubmit={handleSubmit}>
+      <form
+        className="shadow-lg p-5 mb-5 bg-body rounded" 
+        style={formStyles}
+        onSubmit={handleSubmit}>
         <h1 className="text-center">Create User</h1>
 
         <div className="form-group my-4">
-          <label htmlFor="name">Name </label>
+          <label htmlFor="name" className="fw-bold">Name </label>
           <input
             value={name}
             onChange={handleChange}
@@ -76,7 +79,7 @@ const CreateUser = () => {
         </div>
 
         <div className="form-group my-4">
-          <label htmlFor="lastName">Last Name </label>
+          <label htmlFor="lastName" className="fw-bold">Last Name </label>
           <input
             value={lastName}
             onChange={handleChange}
@@ -89,7 +92,7 @@ const CreateUser = () => {
         </div>
 
         <div className="form-group my-4">
-          <label htmlFor="email">Email address</label>
+          <label htmlFor="email" className="fw-bold">Email address</label>
           <input
             value={email}
             onChange={handleChange}
@@ -102,7 +105,7 @@ const CreateUser = () => {
           />
         </div>
         <div className="form-group mb-3">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" className="fw-bold">Password</label>
           <input
             value={password}
             onChange={handleChange}
@@ -115,7 +118,7 @@ const CreateUser = () => {
         </div>
 
         <div className="form-group mb-3">
-          <label htmlFor="chkPassword">Check Password</label>
+          <label htmlFor="chkPassword" className="fw-bold">Check Password</label>
           <input
             value={chkPassword}
             onChange={handleChange}

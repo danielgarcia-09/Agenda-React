@@ -30,7 +30,7 @@ const Events = () => {
         <Link className="ms-3 text-decoration-none" to={"new"}>+</Link>
       </h1>
 
-      <section style={{width: "50%"}} className="my-4 mx-auto row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+      <section style={{width: "100%"}} className="my-4 mx-auto row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {events &&
           events.map((e) => (
             <div key={e.id} className="col">

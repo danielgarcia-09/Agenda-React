@@ -5,7 +5,7 @@ import EventContext from "../../context/events/EventContext";
 import Layout from "../ui/Layout";
 
 const formStyles = {
-  width: "50%",
+  width: "60%",
   margin: "5rem auto",
 };
 
@@ -73,11 +73,14 @@ const NewEvent = () => {
 
   return (
     <Layout>
-      <form style={formStyles} onSubmit={handleSubmit}>
+      <form 
+        className="shadow-lg p-5 mb-5 bg-body rounded"
+        style={formStyles}
+        onSubmit={handleSubmit}>
         <h1 className="text-center">New Event</h1>
 
         <div className="form-group my-4">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name" className="fw-bold">Name</label>
           <input
             value={name}
             onChange={handleChange}
@@ -91,7 +94,7 @@ const NewEvent = () => {
         </div>
 
         <div className="form-group my-4">
-          <label htmlFor="startDate">Start Date</label>
+          <label htmlFor="startDate" className="fw-bold">Start Date</label>
           <input
             value={startDate}
             onChange={handleChange}
@@ -103,7 +106,7 @@ const NewEvent = () => {
         </div>
 
         <div className="form-group mb-3">
-          <label htmlFor="endDate">End Date</label>
+          <label htmlFor="endDate" className="fw-bold">End Date</label>
           <input
             value={endDate}
             onChange={handleChange}
